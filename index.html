@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Случайный текст</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        #randomText {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="randomText"></div>
+
+    <script>
+        // Массив с текстами
+        const texts = [
+            "Пример текста 1",
+            "Пример текста 2",
+            "Пример текста 3",
+            "Пример текста 4",
+            "Пример текста 5"
+        ];
+
+        // Функция для выбора случайного текста
+        function getRandomText() {
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            return texts[randomIndex];
+        }
+
+        // Установить случайный текст на странице
+        document.getElementById("randomText").innerText = getRandomText();
+    </script>
+</body>
+</html>
